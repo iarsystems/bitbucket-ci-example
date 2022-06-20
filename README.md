@@ -4,7 +4,7 @@
 
 Each of the __IAR Build Tools for Linux__ packages requires its specific license. Please feel free to [__contact us__](https://iar.com/about/contact) if you would like to learn how to get access to them.
 
-If you end up with a question specifically related to [this tutorial](https://github.com/iarsystems/bx-gitlab-ci), you might be interested in verifying if it was already answered from [earlier questions][repo-old-issue-url]. Or, [ask a new question][repo-new-issue-url] if you could not find any answer for your question.
+If you end up with a question specifically related to [this tutorial](https://github.com/iarsystems/bx-bitbucket-ci), you might be interested in verifying if it was already answered from [earlier questions][repo-old-issue-url]. Or, [ask a new question][repo-new-issue-url] if you could not find any answer for your question.
 
 
 ## Introduction
