@@ -63,6 +63,7 @@ Bitbucket makes it easy to setup a new self-hosted runner in a Linux host. Add a
 
 - Click `  Finish  ` and you will be taken back to the page where you can see your active runners as well as add more runners.
 
+You can have as many parallel build nodes with runners as your license allows you to. [Contact sales](https://iar.com/about/contact) for expanding your build capacity.
 
 ### Test your runner
 Now we are good to perform a quick test to see if your runner is taking jobs properly.
