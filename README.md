@@ -78,7 +78,7 @@ Now you and/or your team can start pushing code to your repository and get autom
 
 
 ## Summary
-This tutorial provided an overview of how to get started with the IAR Build Tools for Arm on Bitbucket pipelines using Linux self-hosted runners. Development teams can immediately benefit from the comprehensive feedback these modern workflows offer, enabling them to quickly build, analyze, test, and deploy with high quality.
+This tutorial provided an overview of how to get started with the IAR Build Tools for Arm on Bitbucket pipelines using self-hosted Linux runners. Development teams can immediately benefit from the comprehensive feedback these modern workflows offer, enabling them to quickly build, analyze, test, and deploy with high quality.
 
 [__` Follow us `__][url-gh-iar] on GitHub to get updates about tutorials like this and more.
 
