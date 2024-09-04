@@ -58,7 +58,8 @@ Bitbucket makes it easy to setup a new self-hosted runner in a Linux host. Add a
 - Once you have the Bitbucket runner software installed and running on your server, click `   Next   `.
 
 >[!TIP]
->The last wizard's screen provides hints for using the Bitbucket Runner you just added in a pipeline workflow file. 
+>The last wizard's screen provides hints for using the Bitbucket Runner you just added in a pipeline workflow file.
+>
 >![image](https://github.com/user-attachments/assets/4517c887-6ebd-4f2c-95c8-561e418fd8d8)
 
 - Click `  Finish  ` and you will be taken back to the page where you can see your active runners as well as add more runners.
