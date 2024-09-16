@@ -17,7 +17,7 @@ In case you need an introduction on how to get started with Bitbucket, refer to 
 ## Prerequisites
 Before you begin, you will need to download and install the following:
 - IAR Build Tools for Arm 9.60.2 for Ubuntu 22.04 x64 ([`bxarm-9.60.2.deb`](https://updates.iar.com/?product=BXARM&version=9.60))
-   - IAR customers can download it directly from [IAR MyPages](https://iar.my.site.com/mypages). If you do not have a license, [contact sales](https://iar.com/about/contact).
+   - IAR customers can download it directly from [IAR MyPages](https://iar.my.site.com/mypages). If you do not have a license, [contact IAR Sales](https://iar.com/about/contact).
 
 You also will need
 - A [Bitbucket account][url-bb-join].
@@ -64,7 +64,7 @@ Bitbucket makes it easy to setup a new self-hosted runner in a Linux host. Add a
 
 - Click `  Finish  ` and you will be taken back to the page where you can see your active runners as well as add more runners.
 
-You can have as many parallel build nodes with runners as your license allows you to. [Contact sales](https://iar.com/about/contact) for expanding your build capacity.
+You can have as many parallel build nodes with runners as your license allows you to. [Contact IAR Sales](https://iar.com/about/contact) for expanding your build capacity.
 
 ### Test your runner
 Now we are good to perform a quick test to see if your runner is taking jobs properly.
