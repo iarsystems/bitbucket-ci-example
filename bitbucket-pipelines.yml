@@ -1,26 +1,34 @@
 pipelines:
   default:
+    - step:
+        name: Build with BXARM (Self-hosted)
+        runs-on:
+          - self.hosted
+          - linux
+        script:
+          - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/ChecksumLibrary.ewp -make Debug -parallel `nproc` -log all
+          - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/project.ewp -make Debug -parallel `nproc` -log all
+        artifacts:
+          - project/EWARM/Debug/Exe/ChecksumLibrary.a
+          - project/EWARM/Debug/Exe/project.out    
     - parallel:
       - step:
-          name: Build with BXARM
+          name: IAR C-STAT Static Analysis - Library (Self-hosted)
           runs-on:
             - self.hosted
-            - linux.shell
-          script:
-            - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/ChecksumLibrary.ewp -make Debug -log all
-            - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/project.ewp -make Debug -log all
-          artifacts:
-            - project/EWARM/Debug/Exe/ChecksumLibrary.a
-            - project/EWARM/Debug/Exe/project.out
-      - step:
-          name: Analyze with C-STAT                           # Comment out this step if your license has no IAR C-STAT
-          runs-on:
-            - self.hosted
-            - linux.shell
+            - linux
           script:  
-            - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/ChecksumLibrary.ewp -cstat_analyze Debug -log all
+            - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/ChecksumLibrary.ewp -cstat_analyze Debug -parallel `nproc` -log all
             - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/ChecksumLibrary.ewp -cstat_report Debug -log all 
-            - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/project.ewp -cstat_analyze Debug -log all
-            - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/project.ewp -cstat_analyze Debug - log all
+          artifacts:
+            - project/EWARM/Debug/C-STAT/*.html
+      - step:
+          name: IAR C-STAT Static Analysis - Application (Self-hosted)
+          runs-on:
+            - self.hosted
+            - linux
+          script:
+            - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/project.ewp -cstat_analyze Debug -parallel `nproc` -log all
+            - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/project.ewp -cstat_report Debug -log all
           artifacts:
             - project/EWARM/Debug/C-STAT/*.html
