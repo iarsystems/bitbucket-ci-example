@@ -72,7 +72,7 @@ Now we are good to perform a quick test to see if your runner is taking jobs pro
 - Check [x] __Enable Pipelines__.
 - Go to __Pipelines__ → __Run pipeline__.
 
-![image](https://github.com/user-attachments/assets/6dabe03f-5dd7-41e2-8151-27b9b3bf4247)
+![image](https://github.com/user-attachments/assets/bb0678ec-2617-4e6f-a98e-558c45cfcd19)
 
 Now you and/or your team can start pushing code to your repository and get automated results. 
 
