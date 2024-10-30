@@ -1,4 +1,4 @@
-<img align="right" src="https://github.com/user-attachments/assets/d8c32a11-c835-492a-9dae-02dc71b99484" width="96px" />
+<img align="right" src="https://github.com/user-attachments/assets/c3870204-20be-4281-9fa7-016a4999734b" width="96px" />
 
 
 # IAR Build Tools for Arm on Bitbucket using Linux runners
