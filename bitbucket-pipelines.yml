@@ -1,34 +1,29 @@
+image:
+  name: ghcr.io/iarsystems/arm:9.60.4-st
+
 pipelines:
   default:
     - step:
-        name: Build with BXARM (Self-hosted)
-        runs-on:
-          - self.hosted
-          - linux
+        name: Build
         script:
-          - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/ChecksumLibrary.ewp -make Debug -parallel `nproc` -log all
-          - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/project.ewp -make Debug -parallel `nproc` -log all
+          - echo "Number of cores:" $(nproc)
+          - iarbuild project/EWARM/ChecksumLibrary.ewp -make Debug -parallel `nproc` -log all
+          - iarbuild project/EWARM/project.ewp -make Debug -parallel `nproc` -log all
         artifacts:
           - project/EWARM/Debug/Exe/ChecksumLibrary.a
           - project/EWARM/Debug/Exe/project.out    
     - parallel:
       - step:
-          name: IAR C-STAT Static Analysis - Library (Self-hosted)
-          runs-on:
-            - self.hosted
-            - linux
+          name: Library - Static Analysis
           script:  
-            - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/ChecksumLibrary.ewp -cstat_analyze Debug -parallel `nproc` -log all
-            - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/ChecksumLibrary.ewp -cstat_report Debug -log all 
+            - iarbuild project/EWARM/ChecksumLibrary.ewp -cstat_analyze Debug -parallel `nproc` -log all
+            - iarbuild project/EWARM/ChecksumLibrary.ewp -cstat_report Debug -log all 
           artifacts:
             - project/EWARM/Debug/C-STAT/*.html
       - step:
-          name: IAR C-STAT Static Analysis - Application (Self-hosted)
-          runs-on:
-            - self.hosted
-            - linux
+          name: Application - Static Analysis
           script:
-            - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/project.ewp -cstat_analyze Debug -parallel `nproc` -log all
-            - /opt/iarsystems/bxarm/common/bin/iarbuild project/EWARM/project.ewp -cstat_report Debug -log all
+            - iarbuild project/EWARM/project.ewp -cstat_analyze Debug -parallel `nproc` -log all
+            - iarbuild project/EWARM/project.ewp -cstat_report Debug -log all
           artifacts:
             - project/EWARM/Debug/C-STAT/*.html
