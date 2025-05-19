@@ -35,7 +35,9 @@ Once the importing process is complete, Bitbucket will take you to your newly im
 Under your __Repository settings__:
 - Enter a new _secret_ repository variable uner __Repository variables__.
 - Name it `IAR_LMS_BEARER_TOKEN`, and paste your CI Token under __Value__.
+![image](https://github.com/user-attachments/assets/a2c8fbab-05d6-4505-aa72-b7812fcc3c59)
 - Make sure __Secured__ is selected and click `  Add  `.
+![image](https://github.com/user-attachments/assets/567523ce-e3ef-4452-8e86-5441a04d336a)
 
 
 ## Bitbucket pipeline example
@@ -50,6 +52,8 @@ Now we are good to perform a quick test to see if your runner is taking jobs pro
 - From the repository page, go to __Settings__ → __Pipelines__.
 - Check [x] __Enable Pipelines__.
 - Go to __Pipelines__ → __Run pipeline__.
+
+![image](https://github.com/user-attachments/assets/93bc780b-aee2-4682-a529-0d4d8c5b20fb)
 
 Now you and/or your team can start pushing code to your repository and get automated results. 
 
