@@ -59,15 +59,15 @@ Now you and/or your team can start pushing code to your repository and get autom
 
 
 ## Summary
-This tutorial provided an overview of how to get started with the IAR Build Tools for Arm on Bitbucket pipelines. Development teams can immediately benefit from the comprehensive feedback these modern workflows offer, enabling them to quickly build, analyze, test, and deploy with high quality.
+This example provided an overview of how to get started with the IAR Build Tools for Arm on Bitbucket pipelines. Development teams can immediately benefit from the comprehensive feedback these modern workflows offer, enabling them to quickly build, analyze, test, and deploy with high quality.
 
-[__` Follow us `__][url-gh-iar] on GitHub to get updates about tutorials like this and more.
+[__` Follow us `__][url-gh-iar] on GitHub to get updates about examples like this and more.
 
 
 ## Issues
 For technical support contact [IAR Customer Support][url-iar-customer-support].
 
-For questions or suggestions related to this tutorial: try the [wiki][url-repo-wiki] or check [earlier issues][url-repo-issue-old]. If those don't help, create a [new issue][url-repo-issue-new] with detailed information.
+For questions or suggestions related to this example: try the [wiki][url-repo-wiki] or check [earlier issues][url-repo-issue-old]. If those don't help, create a [new issue][url-repo-issue-new] with detailed information.
 
 [^1]: The use of the IAR Build Tools is subject to the [IAR Software License Agreement](https://github.com/iarsystems/bitbucket-ci-example/blob/master/LICENSE.md) and requires a valid subscription-based activation token for operation. If you are not yet a subscriber, please [contact us](https://iar.com/about/contact) for more information.
 
